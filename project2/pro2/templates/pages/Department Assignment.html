@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block contentHead %}
+    <title>Sutdent's Department Assignment</title>
+    <meta name="description" content="This Is Student's Department Assignment Page" />
+{% endblock contentHead %}
+
+{% block content %}
+    <h2 class = "H2_2">Department Assignment</h2>
+    <p id="edit"> *You Can Assign Department For Specific Student Through Search Page* <p>
+    <form method = 'POST'>
+        {% csrf_token %}
+        {{Dform}}
+        <input class="submit" type="submit" value="Save" />
+    </form>
+    <br><br>
+{% endblock content %}
+

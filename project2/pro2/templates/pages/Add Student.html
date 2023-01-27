@@ -1,0 +1,38 @@
+{% extends 'base.html' %} 
+
+{% block contentHead %}
+<title>Add Student</title>
+<meta name="description" content="This Is Add Student Page" />
+{% endblock contentHead %} 
+
+{% block content %}
+
+<h2 class = "H2">Add Student information</h2>
+<div id = "Error">
+  {% for message in messages %}
+    <p>{{message}}</p>
+  {% endfor %}
+</div>
+
+<form action="" method="POST">
+
+  {% csrf_token %}
+  
+  {{form}}
+    <br /><br />
+
+  <input class="submit" type="reset" value="Reset" />
+  <input class="submit" type="submit" value="Save" />
+</form>
+<br /><br />
+
+<script>
+    var form_fields = document.getElementsByTagName('input')
+    form_fields[1].placeholder = 'Enter id';
+    form_fields[2].placeholder = 'Enter name';
+    form_fields[3].placeholder = 'yyyy-mm-dd';
+    form_fields[4].placeholder = 'Enter gpa';
+    form_fields[5].placeholder = 'Enter email';
+    form_fields[6].placeholder = 'Enter mobile phone';
+</script>
+{% endblock content %}

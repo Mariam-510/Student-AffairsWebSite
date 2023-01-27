@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block contentHead %}
+    <title>Search</title>
+    <meta name="description" content="This Is Search Student Page" />
+{% endblock contentHead %}
+
+{% block content %}
+    <p>
+        <h1 class ="serH1">Search</h1>
+    </p>
+    <form action="" method="GET">
+        <div id="content">
+            <label for="search_name">Search Name: </label>
+            <input class ="serInput" type="search" placeholder="search by name" name="search_name" >
+        </div>
+    </form>
+
+    <h2 class ="serH2">Student(s) data</h2>
+    <p class = "staP">Number of Active Students = {{allStudents}}</p>
+    <div id="edit">
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {% endfor %}
+    </div>
+    <span id="error"></span>
+    <table class = "serTable">
+        <thead>
+                <td>Name</td>
+                <td>ID</td>
+                <td>GPA</td>
+                <td>Level</td>
+                <td>Email</td>
+                <td>Phone number</td>
+                <td>Status</td>
+                <td>Department</td>
+                <td>Edit</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for s in students %}
+            <tr id="tr1">
+                <td>{{s.name}}</td>
+                <td>{{s.id}}</td>
+                <td>{{s.GPA}}</td>
+                <td>{{s.level}}</td>
+                <td>{{s.email}}</td>
+                <td>{{s.mobileNumber}}</td>
+                <td>{{s.status}}</td>
+                <td><a class="DLink" href="{% url 'depUpdate' s.id %}">{{s.department}}</a></td>
+                <td>
+                    <a class="ELink" href="{% url 'update2' s.id %}">Edit</a>
+                    <br><br>
+                    <br/>
+                    <a class="DeLink" href="{% url 'delete2' s.id %}">Delete</a>
+                </td>
+            </tr>
+        {%endfor%} 
+        </tbody>
+    </table>
+    <br><br>
+{% endblock content %}

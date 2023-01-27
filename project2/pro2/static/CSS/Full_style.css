@@ -1,0 +1,369 @@
+/* navigation bar */
+
+nav {
+    background-color: rgba(128, 125, 121, 0.863);
+    text-align: right;
+    font-size: 17px;
+}
+
+.logoimg {
+    float: left;
+    padding-left: 50px;
+    margin-top: 3px;
+    color: #8ad1dc;
+    font-size: 17px;
+}
+
+.logo {
+    vertical-align: middle;
+    width: 55px;
+    height: 55px;
+}
+
+.navbar {
+    padding-right: 70px;
+}
+
+.navA {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 15px;
+    padding-bottom: 25px;
+    display: inline-block;
+}
+
+a:hover {
+    background-color: rgba(0, 0, 0, 0.432);
+}
+
+
+/*body*/
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: rgb(224, 232, 240);
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+form {
+    max-width: 500px;
+    margin: 10px auto;
+    border: none;
+    font-weight: bold;
+    padding-bottom: 60px;
+}
+
+.serH1 {
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.staH1 {
+    text-align: center;
+    font-size: x-large;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.H2 {
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.H2_2 {
+    text-align: center;
+    font-size: 1.4em;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+
+.serH2 {
+    margin-top: -5px;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+input,
+select,
+.logBut,
+.ELink,
+.DLink,
+.DeLink,
+.DelLink {
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 10px 5px 5px black;
+    background-color: #8ec4cc;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.serInput {
+    border: black 1px solid;
+    font-size: 15px;
+    margin: 10px;
+    margin-left: 25px;
+    margin-bottom: 0px;
+    outline: 0;
+    padding: 10px 15px;
+    width: 50%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #8ec4cc;
+    color: black;
+}
+
+.logBut {
+    max-width: 180px;
+    margin-left: 50px;
+}
+
+select {
+    -webkit-appearance: menulist-button;
+}
+
+.submit,
+.DelLink {
+    cursor: pointer;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: black;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    background-color: #8ec4cc;
+    width: 70%;
+    border: 1px solid;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+
+.ELink,
+.DLink,
+.DeLink {
+    border: black 1px solid;
+    font-size: 15px;
+    margin: 10px;
+    outline: 0;
+    padding: 10px 15px;
+    width: 50%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #8ec4cc;
+    color: black;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.DelLink {
+    text-decoration: none;
+}
+
+ :focus {
+    background-color: rgb(224, 232, 240);
+}
+
+input:hover,
+.DelLink:hover {
+    background-color: rgb(224, 232, 240);
+}
+
+button {
+    background-color: #8ec4cc;
+}
+
+button:hover {
+    background-color: rgb(224, 232, 240);
+}
+
+#check {
+    max-width: 15px;
+    margin-left: 30px;
+}
+
+#content {
+    margin-left: -400px;
+    width: 80%;
+}
+
+.staP {
+    font-weight: bold;
+    width: 23%;
+    border: 2px solid #eee;
+    outline: 1px solid grey;
+    margin-bottom: 25px;
+    margin-left: 52px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 70px;
+    background-color: #8ec4cc;
+}
+
+.staSave {
+    width: 10%;
+    padding: 10px;
+}
+
+#Error {
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}
+
+#edit {
+    font-size: 20px;
+    color: red;
+    margin-left: 25px;
+}
+
+.serTable {
+    border: 1px solid gray;
+    margin: 4%;
+    margin-right: 3%;
+    margin-bottom: 5em;
+    border-spacing: 0ch;
+    border-spacing: 2px;
+    width: 93%;
+}
+
+.serTable td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid rgb(173, 205, 218);
+}
+
+.serTable thead td {
+    padding: 10px;
+    background-color: #8ec4cc;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    border-color: #457c85;
+}
+
+.staTable {
+    border: 1px solid gray;
+    margin: 4%;
+    margin-left: 3%;
+    margin-bottom: 5em;
+    border-spacing: 0ch;
+    border-spacing: 2px;
+    width: 95%;
+}
+
+.staTable td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid rgb(173, 205, 218);
+}
+
+.staTable thead td {
+    padding: 10px;
+    background-color: #8ec4cc;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    border-color: #457c85;
+}
+
+.pic {
+    padding-left: 950px;
+    margin-bottom: -50px;
+    width: 350px;
+    height: 350px;
+}
+
+.welcome {
+    outline-style: ridge;
+    outline-color: black;
+    outline-width: 3px;
+    outline-offset: -15px;
+    margin-top: 25px;
+}
+
+.welcome h1 {
+    padding-left: 500px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.welcome h2 {
+    padding-left: 485px;
+    margin-left: 20px;
+    margin-top: -5px;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.welcome #p2 {
+    padding-left: 50px;
+    margin-left: 20px;
+    margin-top: -270px;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.welcome ul {
+    padding-left: 100px;
+    margin-left: 35px;
+    font-size: 25px;
+}
+
+
+/*footer*/
+
+footer {
+    background-color: rgba(128, 125, 121, 0.863);
+    color: white;
+    height: 98px;
+    font-style: italic;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.copy {
+    margin-top: -17px;
+    /* padding-left: 250px;*/
+    text-align: center;
+}
+
+.in {
+    padding: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding-bottom: 25px;
+    display: inline-block;
+}
+
+.infor {
+    text-align: center;
+}

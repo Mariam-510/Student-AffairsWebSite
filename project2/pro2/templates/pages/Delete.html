@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block contentHead %}
+<title>Delete</title>
+<meta name="description" content="This Is Delete Page" />
+{% endblock contentHead %} 
+
+{% block content %}
+<h2 class="H2">Are You Sure You Want To Delete?</h2>
+
+<form action="" method="POST">
+{% csrf_token %}
+{{form.id.label}}
+{{form.id}}
+{{form.name.label}}
+{{form.name}}
+{{form.dateOfBirth.label}}
+{{form.dateOfBirth}}
+{{form.GPA.label}}
+{{form.GPA}}
+{{form.gender.label}}
+{{form.gender}}
+{{form.level.label}}
+{{form.level}}
+{{form.email.label}}
+{{form.email}}
+{{form.mobileNumber.label}}
+{{form.mobileNumber}}
+<label><b>Department:</b></label>
+<input id="user" type="text" value = {{form.instance.department}} readonly>
+{{form.status.label}}
+{{form.status}}
+
+    <input class="submit" type="submit" value="Yes" />
+    <a class="DelLink" href = "{% url 'StatusStudent' %}" type="button" >No</a>
+</form>
+<br />
+<br />
+<br />
+{% endblock content %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block contentHead %}
+<title>Edit Student Date</title>
+<meta name="description" content="This Is Edit Student Date Page" />
+{% endblock contentHead %} 
+
+{% block content %}
+<h2 class="H2">Edit Student information</h2>
+<p id="edit"> *You Can Edit Specific Student Through Search or Status Page* <p>
+
+<form action="" method="POST">
+
+{% csrf_token %}
+{{form.id.label}}
+{{form.id}}
+{{form.name.label}}
+{{form.name}}
+{{form.dateOfBirth.label}}
+{{form.dateOfBirth}}
+{{form.GPA.label}}
+{{form.GPA}}
+{{form.gender.label}}
+{{form.gender}}
+{{form.level.label}}
+{{form.level}}
+{{form.email.label}}
+{{form.email}}
+{{form.mobileNumber.label}}
+{{form.mobileNumber}}
+<label><b>Department:</b></label>
+<input id="user" type="text" value = {{form.instance.department}} readonly>
+{{form.status.label}}
+{{form.status}}
+
+
+<br />
+<input class="submit" type="submit" value="Update" />
+</form>
+<br />
+
+<script>
+    var form_fields = document.getElementsByTagName('input')
+    form_fields[1].placeholder = 'Enter id';
+    form_fields[2].placeholder = 'Enter name';
+    form_fields[3].placeholder = 'yyyy-mm-dd';
+    form_fields[4].placeholder = 'Enter gpa';
+    form_fields[5].placeholder = 'Enter email';
+    form_fields[6].placeholder = 'Enter mobile phone';
+</script>
+{% endblock content %}

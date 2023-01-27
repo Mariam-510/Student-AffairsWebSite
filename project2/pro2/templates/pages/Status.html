@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block contentHead %}
+    <title>Status</title>
+    <meta name="description" content="This Is Status Student Page" />
+{% endblock contentHead %}
+
+{% block content %}
+    <h1 class = "staH1">Student(s) data</h1>
+    <p class = "staP">Total Number of Students = {{allStudents}}</p>
+    
+    <table class = "staTable">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>ID</td>
+                <td>GPA</td>
+                <td>Level</td>
+                <td>Email</td>
+                <td>Phone number</td>
+                <td>Status</td>
+                <td>Department</td>
+                <td>Edit</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for s in students %}
+            <tr>
+                <td>{{s.name}}</td>
+                <td>{{s.id}}</td>
+                <td>{{s.GPA}}</td>
+                <td>{{s.level}}</td>
+                <td>{{s.email}}</td>
+                <td>{{s.mobileNumber}}</td>
+                <td><a class="ELink" href="{% url 'staUpdate' s.id %}">{{s.status}}</a></td>
+                <td>{{s.department}}</td>
+                <td>
+                    <a class="ELink" href="{% url 'update' s.id %}">Edit</a>
+                        <br><br>
+                        <br/>
+                    <a class="DeLink" href="{% url 'delete' s.id %}">Delete</a>
+                </td>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br>
+    <br><br>
+    <br><br>
+{% endblock content %}

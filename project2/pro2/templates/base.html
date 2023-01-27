@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block contentHead %} 
+    {% endblock contentHead %}
+    <meta charset="UTF-8" />
+    <link rel="stylesheet"href="{% static 'CSS/Full_style.css' %}"/>
+</head>
+
+<body>
+    {% include 'parts/nav.html' %} 
+
+    {% block content %} 
+    {% endblock content %} 
+
+    {% include 'parts/footer.html' %} 
+    
+</body>
+</html>

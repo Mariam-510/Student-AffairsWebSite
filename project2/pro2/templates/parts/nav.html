@@ -1,0 +1,16 @@
+{% load static %}
+<nav>
+    <div class="logoimg">
+        <img class="logo" src="{% static 'Img/FB_IMG.png' %}"alt="FCI Logo"> FCI E-Community
+    </div>
+    <div class="navbar">
+        <a class = "navA" href="{% url 'StudentAffairs' %}">Home page</a>
+        <a class = "navA" href="{% url 'AddStudent' %}">Add</a>
+        <a class = "navA" href="{% url 'EditStudent' %}">Edit</a>
+        <a class = "navA" href="{% url 'SearchStudent' %}">Search</a>
+        <a class = "navA" href="{% url 'StatusStudent' %}">Status</a>
+        <a class = "navA" href="{% url 'DepartmentStudent' %}">Department</a>
+        <span class = "navA">Hello, {{request.user}}</span>
+        <a class = "navA" href="{% url 'Logout' %}">Log</a>
+    </div>
+</nav>

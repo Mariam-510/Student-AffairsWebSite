@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contentHead %}
+    <title>Student Affairs Home Page</title>
+    <meta name="description" content="This Is home Student Page" />
+{% endblock contentHead %}
+
+{% block content %}
+    <br/>
+    <div class="welcome">
+        <br />
+        <h1>Welcome, FCI Community</h1>
+        <h2>This is Student Affairs Home Page</h2>
+        <img class="pic" src="{% static 'Img/FB_IMG.png' %}" alt="FCI Logo">
+        <p id="p2">It includes:</p>
+        <ul>
+            <li>Adding students</li>
+            <li>Editing existing student information.</li>
+            <li>Deleting existing student data.</li>
+            <li>Viewing all active/inactive students.</li>
+            <li>Assigning a department.</li>
+            <li>Search for active students.</li>
+            <li>Change the status of student.</li>
+        </ul>
+        <br/>
+    </div>
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block contentHead %}
+    <title>Log in</title>
+    <meta name="log in" content="this is log in page" />
+{% endblock contentHead %}
+
+{% block content %}
+    <h2 class = "H2_2">Log in Form</h2>
+    <div id="Error"></div>
+    <form action = "" method = 'POST'>
+        {% csrf_token %}
+        <div>
+            <label><b>Username</b></label>
+            <input id="user" type="text" placeholder="Enter Username" name = "username">
+        </div>
+        <br />
+        <div>
+            <label><b>Password</b></label>
+            <input id="pass" type="password" placeholder="Enter Password" name = "password">
+        </div>
+        <br />
+        <div>
+            <input id="check" type="checkbox" checked="checkbox" name="remember">
+            <label>Remember me </label>
+        </div>
+        <br />
+        <div>
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        </div>
+        <div>
+            <button class = "logBut" type="submit">Login</button>
+            <button class = "logBut" type="button">Cancel</button>
+            Don't have an account?
+            <a href = "{% url 'Register' %}">Register</a>
+        </div>
+    </form>
+{% endblock content %}
